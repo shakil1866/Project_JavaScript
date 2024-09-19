@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: green;
+            color: white;
+            font-weight: 600;
+            outline: none;
+
+        }
+
+        button:hover {
+            background-color: lightgreen;
+            color: black;
+            transition-duration: 0.5s;
+            outline: none;
+
+        }
+    </style>
+    <title>Color Changer</title>
+</head>
+
+<body>
+    <div class="center">
+        <button type="button" class="btn">Click Me</button>
+    </div>
+</body>
+<script>
+    let body = document.getElementsByTagName("body")[0]
+    let button = document.querySelector(".btn");
+  
+  let colors = ["red", "green", "yellow", "blue", "black", "pink", "violet"]
+
+  let todo = ()=>{
+    let colorIndex = colors[Math.floor(Math.random() * colors.length)]
+body.style.backgroundColor = colorIndex
+    
+  }
+
+button.addEventListener("click", ()=> {
+    todo()
+})
+</script>
+</html>
